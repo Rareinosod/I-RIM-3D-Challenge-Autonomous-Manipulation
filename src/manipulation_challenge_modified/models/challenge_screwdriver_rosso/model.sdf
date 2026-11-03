@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="challenge_screwdriver">
+    <static>false</static>
+    <link name="link">
+      <inertial>
+        <mass>0.05</mass>
+        <inertia>
+          <ixx>0.000052083</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.000052083</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.000020833</izz>
+        </inertia>
+      </inertial>
+
+      <!-- Rotato di 90° attorno a Z -->
+      <pose>0 0 0 0 0 1.5708</pose> 
+
+      <!-- COLLISION -->
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://challenge_screwdriver_rosso/mesh/challenge_screwdriver.stl</uri>
+            <scale>0.001 0.001 0.001</scale> <!-- più grande -->
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>30.0</mu>
+              <mu2>30.0</mu2>
+              <fdir1>0 0 0</fdir1>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1000000.0</kp>
+              <kd>100.0</kd>
+              <min_depth>0.0025</min_depth>
+              <max_vel>1.0</max_vel>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <!-- VISUAL -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://challenge_screwdriver_rosso/mesh/challenge_screwdriver.stl</uri>
+            <scale>0.001 0.001 0.001</scale> <!-- più grande -->
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.0 0.0 1</ambient>
+          <diffuse>1.0 0.0 0.0 1</diffuse>
+          <specular>0.2 0.2 0.2 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <velocity_decay>
+        <linear>0.0</linear>
+        <angular>0.0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model>
+</sdf>
+

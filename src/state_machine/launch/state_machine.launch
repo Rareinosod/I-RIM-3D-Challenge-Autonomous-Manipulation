@@ -1,0 +1,13 @@
+<launch>
+    <!-- Assicurati che use_sim_time sia settato (per Gazebo) -->
+    <!-- Se usi Gazebo, questo parametro dovrebbe essere già true -->
+    
+    <!-- State Machine Node - This manages all other nodes -->
+    <node pkg="state_machine" type="state_machine_node.py" name="state_machine" output="screen">
+        <!-- Rispetta il parametro use_sim_time globale -->
+    </node>
+
+    <!-- Optional: Only launch essential nodes that need to run continuously -->
+    <!-- Most nodes are managed by the state machine itself -->
+
+</launch>
