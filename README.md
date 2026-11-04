@@ -39,6 +39,10 @@ Lo scenario della sfida simula una stazione di lavoro cooperativa di manutenzion
 1. **Robot-to-Human Handover (R2H)**: L'operatore richiede un utensile tramite un gesto della mano. TIAGo scansiona il banco da lavoro, individua l'utensile richiesto tra varianti geometricamente identiche ma di colore diverso, ne calcola la posa di presa ottimale 3D e lo consegna direttamente nel palmo della mano dell'operatore.
 2. **Human-to-Robot Handover (H2R)**: Al termine della lavorazione, l'operatore restituisce l'utensile porgendolo al robot e indicando con un gesto la direzione di stoccaggio. TIAGo preleva il tool dalla mano umana e lo posiziona nel box target identificato sul tavolo (Box Sinistro o Box Destro).
 
+> [!NOTE]
+> ### 🎯 Ambito di Sviluppo & Focus del Repository
+> Questo repository documenta l'architettura robotica complessiva sviluppata per l'**I-RIM 3D Challenge 2025**, ponendo un focus tecnico e implementativo sul modulo di **Percezione Multimodale, Visione Artificiale e Gesture Recognition Real-Time (HRC)** sviluppato da **Ronan Alessandro Reinoso Dominguez** sotto la supervisione e in stretta collaborazione con il tutor di ricerca **Gianmarco Cirelli**, all'interno dell'infrastruttura di simulazione, controllo e motion planning MoveIt! coordinata con la supervisione del tutor **Rita Molle**.
+
 ---
 
 ## 2. Piattaforma Robotica & Setup Simulativo
@@ -270,24 +274,21 @@ All'interno della cartella [`research_and_prototypes`](file:///c:/Users/ronan/Do
 
 ---
 
-## 9. Team, Ruoli & Riconoscimenti Accademici
+## 9. Team & Riconoscimenti Accademici
 
-Il progetto è stato sviluppato dal team dell'**Università Campus Bio-Medico di Roma** per la competizione nazionale **I-RIM 3D Challenge 2025**.
+Il progetto è stato sviluppato dal team dell'**Università Campus Bio-Medico di Roma** in occasione della competizione nazionale **I-RIM 3D Challenge 2025** (Track di Manipolazione).
 
-### Supervisione Accademica & Tutor di Ricerca:
-* **Gianmarco Cirelli** (*PhD Candidate / Research Tutor*): Lead per la computer vision e il deep learning. Supervisione dell'addestramento del modello neurale YOLOv8, architettura di estrazione nuvole di punti 3D e co-sviluppo della pipeline di percezione avanzata.
-* **Rita Molle** (*PhD Candidate / Research Tutor*): Lead per l'infrastruttura robotica e cinematica. Architettura dei package ROS, configurazione cinematica e Planning Scene MoveIt!, implementazione del modello di simulazione Gazebo e coordinamento dell'automa FSM.
+### Tutor & Supervisori di Ricerca (PhD):
+* **Gianmarco Cirelli** (*PhD Candidate, Università Campus Bio-Medico di Roma*) – Supervisione e co-sviluppo del modulo di Computer Vision, Deep Learning (YOLOv8) e pipeline Point Cloud 3D.
+* **Rita Molle** (*PhD Candidate, Università Campus Bio-Medico di Roma*) – Supervisione e coordinamento dell'infrastruttura ROS Noetic, motion planning MoveIt!, simulazione Gazebo e FSM.
 
-### Team Studenti di Sviluppo:
-* **Ronan Alessandro Reinoso Dominguez** (*Autore & Robotics Engineer*):
-  * Ideazione e sviluppo del modulo di **Gesture Recognition real-time** con MediaPipe 3D e classificazione euristica a 21 landmark.
-  * Sviluppo degli algoritmi di **segmentazione adattiva Otsu, impronte cromatiche HSV e distanza di Bhattacharyya** per la risoluzione dell'ambiguità tra cacciaviti.
-  * Formulazione della **stima pose 3D con decomposizione spettrale PCA** e calcolo dello spessore di presa per il gripper.
-  * Implementazione e testing dei prototipi di grasping e handover safety.
-  * Sviluppo e integrazione dei nodi ROS di percezione (`PC_objDetect_color.py`, `gesture_recognition.py`) e gestione delle trasformazioni TF verso `base_footprint`.
-* **Edoardo Mosca** (*Student Team Member*): Collaborazione al testing sperimentale, validazione della logica di cooperazione e benchmarking dei tempi di ciclo.
-* **Francesca Sordi** (*Student Team Member*): Validazione dei modelli CAD/SDF in ambiente Gazebo e supporto alle sessioni di test cinematico.
-* **Alessandra Carovigno** (*Student Team Member*): Analisi dei dati sensoriali, ottimizzazione delle condizioni di illuminazione e supporto alla documentazione tecnica.
+### Team Studenti:
+* **Ronan Alessandro Reinoso Dominguez**
+* **Edoardo Mosca**
+* **Francesca Sordi**
+* **Alessandra Carovigno**
+
+> **Nota di Contesto**: La documentazione tecnica e i codici raccolti in questa repository rappresentano il lavoro integrato del team, con particolare approfondimento ingegneristico sulle componenti di percezione, classificazione cromatica e stima pose 3D sviluppate da Ronan Alessandro Reinoso Dominguez insieme a Gianmarco Cirelli.
 
 ---
 
