@@ -207,7 +207,10 @@ Il modulo di interazione HRC consente all'operatore di comandare il robot senza 
 La funzione `fingers_up()` confronta la coordinata $Y$ (o $X$ per il pollice) della punta del dito (**Tip**) rispetto alla corrispondente articolazione prossimale (**Pip**):
 
 $$
-\text{finger\_state} = \begin{cases} 1 & \text{se } Y_{\text{Tip}} < Y_{\text{Pip}} \\ 0 & \text{altrimenti} \end{cases}
+s_{\text{finger}} = \begin{cases}
+1, & \text{se } Y_{\text{Tip}} < Y_{\text{Pip}} \\
+0, & \text{altrimenti}
+\end{cases}
 $$
 
 | Gesto Operatore | Configurazione Dita | Utensile / Azione Mappata | Topic Pubblicato |
