@@ -1,5 +1,6 @@
 # Autonomous Robotic Manipulation & Human-Robot Collaboration (I-RIM 3D Challenge)
 
+[![Award](https://img.shields.io/badge/Award-1%C2%B0%20Classificato%20%7C%20Vincitore%20Nazionale%20(Maker%20Faire%20Rome)-gold.svg?style=for-the-badge&logo=trophy&logoColor=white)]()
 [![ROS Version](https://img.shields.io/badge/ROS-Noetic-blue.svg)](http://wiki.ros.org/noetic)
 [![Robot Platform](https://img.shields.io/badge/Cobot-PAL%20Robotics%20TIAGo-orange.svg)](https://pal-robotics.com/robots/tiago/)
 [![Motion Planning](https://img.shields.io/badge/MoveIt!-1.1.13-brightgreen.svg)](https://moveit.ros.org/)
@@ -7,7 +8,7 @@
 [![Simulation](https://img.shields.io/badge/Gazebo-11-yellow.svg)](http://gazebosim.org/)
 [![Academic Project](https://img.shields.io/badge/Competition-National%20I--RIM%203D%20Challenge-purple.svg)](https://i-rim.it/)
 
-Framework robotico avanzato per la manipolazione autonoma, percezione 3D multimodale e interazione fisica uomo-robot (**Human-Robot Collaboration - HRC**) sviluppato per la competizione nazionale **I-RIM 3D Challenge** (Track di Manipolazione) sul robot umanoide mobile **PAL Robotics TIAGo**.
+Framework robotico avanzato vincitore del **1° Posto Assoluto** alla competizione nazionale inter-universitaria **I-RIM 3D Challenge 2025** (Track di Manipolazione), svoltasi nell'ambito della conferenza nazionale **I-RIM** durante **Maker Faire Rome – The European Edition**, per la manipolazione autonoma, percezione 3D multimodale e interazione fisica uomo-robot (**Human-Robot Collaboration - HRC**) sul robot umanoide mobile **PAL Robotics TIAGo**.
 
 Il sistema implementa una pipeline completa che unisce visione artificiale (YOLOv8 custom, segmentazione adattiva Otsu, impronte cromatiche con distanza di Bhattacharyya), stima della posa e della geometria di presa 3D tramite **PCA su nuvole di punti**, riconoscimento gestuale touchless operatore (MediaPipe 3D), una **Macchina a Stati Finiti (FSM)** di supervisione e pianificazione del moto cartesiano con **MoveIt!** e gestione dinamica degli ostacoli nella Planning Scene.
 
@@ -38,6 +39,10 @@ L'**I-RIM 3D Challenge** è la competizione scientifica nazionale organizzata da
 Lo scenario della sfida simula una stazione di lavoro cooperativa di manutenzione industriale in cui il cobot **PAL Robotics TIAGo** assiste un operatore umano eseguendo due task principali in anello chiuso:
 1. **Robot-to-Human Handover (R2H)**: L'operatore richiede un utensile tramite un gesto della mano. TIAGo scansiona il banco da lavoro, individua l'utensile richiesto tra varianti geometricamente identiche ma di colore diverso, ne calcola la posa di presa ottimale 3D e lo consegna direttamente nel palmo della mano dell'operatore.
 2. **Human-to-Robot Handover (H2R)**: Al termine della lavorazione, l'operatore restituisce l'utensile porgendolo al robot e indicando con un gesto la direzione di stoccaggio. TIAGo preleva il tool dalla mano umana e lo posiziona nel box target identificato sul tavolo (Box Sinistro o Box Destro).
+
+> [!TIP]
+> ### 🏆 1° Posto Assoluto Nazionale — Maker Faire Rome
+> Il sistema sviluppato dal team dell'**Università Campus Bio-Medico di Roma** si è classificato al **1° Posto Assoluto** nella competizione inter-universitaria **I-RIM 3D Challenge (Track di Manipolazione)** a **Maker Faire Rome – The European Edition**. La soluzione ha primeggiato nel confronto diretto tra i team di robotica dei principali atenei italiani per velocità dei tempi di ciclo, accuratezza della presa 3D e fluidità dell'interazione fisica uomo-robot in ambiente non strutturato.
 
 > [!NOTE]
 > ### 🎯 Ambito di Sviluppo & Focus del Repository
@@ -276,7 +281,7 @@ All'interno della cartella [`research_and_prototypes`](file:///c:/Users/ronan/Do
 
 ## 9. Team & Riconoscimenti Accademici
 
-Il progetto è stato sviluppato dal team dell'**Università Campus Bio-Medico di Roma** in occasione della competizione nazionale **I-RIM 3D Challenge 2025** (Track di Manipolazione).
+Il progetto è stato sviluppato dal team dell'**Università Campus Bio-Medico di Roma**, vincitore del **1° Premio Assoluto** alla competizione nazionale **I-RIM 3D Challenge 2025** (Track di Manipolazione) tenutasi durante **Maker Faire Rome – The European Edition**.
 
 ### Tutor & Supervisori di Ricerca (PhD):
 * **Gianmarco Cirelli** (*PhD Candidate, Università Campus Bio-Medico di Roma*) – Supervisione e co-sviluppo del modulo di Computer Vision, Deep Learning (YOLOv8) e pipeline Point Cloud 3D.
